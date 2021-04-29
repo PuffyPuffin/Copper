@@ -10,8 +10,8 @@ import csv
 #Import files from computer
 ## file 1 = no sinking (ns)
 ## file 2 = sinking (s)
-file1 = '/Users/kudou/Documents/PostBack_Work/CODE/data/Leatherman_All/leathermanNavy_3d_nosink/release_2018.05.01.nc'
-file2 = '/Users/kudou/Documents/PostBack_Work/CODE/data/Leatherman_All/leathermanNavy_3d_sink40_sink/release_2018.05.01.nc'
+file1 = 'data/release_2018.05.01.nc'
+file2 = 'data/release_2018.05.01.nc'
 # Read netCDF4 files for sticking
 ns = nc(file1)
 s = nc(file2)
@@ -88,5 +88,5 @@ distance = pd.DataFrame(list(zip(ns_sum_dist.flatten(), s_sum_dist.flatten())))
 ### Month = 3 letter acronymn, ex. January = Jan
 ### Year = last two digits unless pre-2000, ex. 2018 = 18
 ### Location = shortened name, ex. Puget Sound Naval Shipyard = Navy
-distance.to_csv("Data/May18Navy_dist.csv", header = cols)
+distance.to_csv("data/May18Navy_dist.csv", header = cols)
 
